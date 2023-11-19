@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<style>
+    body {
+        height: 100%;
+        margin: 0;
+        background-color: #FFDDBB; 
+    }
+</style>
+{% endblock head %}
+
+{% block title %}線上家教平台{% endblock title%}
+
+{% block content%}
+<div class="position-absolute top-50 start-50 translate-middle">
+    <img class="index_pic" src="{{ url_for('static', filename='./img/bsg.jpeg') }}">
+    <h1 class="index_title">線上家教平台</h1>
+    <div class="btn_div">
+        <a href="{{ url_for('api.register') }}">
+            <button class="index_btn">註冊</button>
+        </a>
+        <a href="{{ url_for('api.login') }}">
+            <button class="index_btn">登入</button>
+        </a>
+    </div>
+</div>
+{% endblock content%}
